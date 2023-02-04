@@ -1,0 +1,10 @@
+# JaCaMo Documentation
+:toc: right
+:author: JaCaMo Team
+:date: February 2023
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
+:icons: font
+:prewrap!:
+
+This repository groups together all the documentation of the https://github.com/jacamo-lang/jacamo[JaCaMo platform].
