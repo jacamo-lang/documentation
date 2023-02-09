@@ -1,4 +1,4 @@
-# Getting started as a JaCaMo developer
+# JaCaMo Platform
 :toc: right
 :author: JaCaMo Team
 :date: February 2023
@@ -7,6 +7,6 @@
 :icons: font
 :prewrap!:
 
-The https://github.com/jacamo-lang/jacamo[JaCaMo project] aims to promote the Multi-Agent Oriented Programming (MAOP) approach by providing a suitable integration of tools and languages for programming the following dimensions: agents (https://github.com/jason-lang/jason[Jason]), environment (https://github.com/cartago-lang/cartago[CArtAgO]), and organisation (https://github.com/moise-lang/moise[Moise]).
+The https://github.com/jacamo-lang/jacamo[JaCaMo project] aims to promote the Multi-Agent Oriented Programming (MAOP) approach by providing a developemnt platform that integrates tools and languages for programming the following dimensions of Multi-Agent Systems: agents, environment, and organisation.
 
 The available documentation is https://github.com/jacamo-lang/jacamo/blob/master/doc/readme.adoc[currently on GitHub].
