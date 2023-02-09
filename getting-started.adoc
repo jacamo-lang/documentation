@@ -1,22 +1,35 @@
-= JaCaMo Installation
+# Getting Started as a JaCaMo Application Developer
 :toc: right
+:author: JaCaMo Team
+:date: February 2023
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
+:icons: font
+:prewrap!:
+
+This guide walks you through the process of creating a Multi-Agent application using JaCaMo platform.
+
+
+= What You Will Build
+
+You will build a very simple Multi-Agent System composed of two agents that exchange simple messages. These agents are named Bob and Alice. In the application, Alice sends a hello message to Bob.
+
+NOTE: As a getting  started, the environment and organisation dimensions of JaCaMo will not be explored here. 
+
+= What You Need
+
+* Java 17 or later
+* A shell terminal
+* A text editor
+
+= Creating an initial application
 
 ifdef::env-github[:outfilesuffix: .adoc]
 
-We have different options to start using JaCaMo: simple shell script commands, Gradle, eclipse or Docker.
-
-Eclipse and shell script options require that you download and install JaCaMo in your machine.
-Since the shell script, Gradle, and Docker options do not include an IDE, you can either import the project into an Eclipse workspace (instructions are shown by the creation script) or use some text editor (we suggest Atom, see below).
-
-== Gradle
-
-Requirements:
-
-- Java >= 17
-
-Follow the steps below to create a new application:
+The following commands will create a new JaCaMo application with some initial code for agents,  environment and organisation. You will be asked to give an identification to the application, here we will use `my1st-app`.
 
 NOTE: The first time you run takes longer since it downloads JaCaMo.
+
 
 Unix::
 +
