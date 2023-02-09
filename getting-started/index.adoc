@@ -141,3 +141,5 @@ When you execute the application again, the output is:
 ----
 
 As you can see at http://127.0.0.1:3272, Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"`` and `A` to `alice`.
+
+image:./screen1.png[Bob's Mind]
