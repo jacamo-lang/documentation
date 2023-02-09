@@ -9,6 +9,6 @@
 
 The https://github.com/jacamo-lang/jacamo[JaCaMo project] aims to promote the Multi-Agent Oriented Programming (MAOP) approach by providing a developemnt platform that integrates tools and languages for programming the following dimensions of Multi-Agent Systems: agents, environment, and organisation.
 
-link:./getting-started.adoc[Getting Started]
+link:./getting-started/index.adoc[Getting Started]
 
 More documentation is available at https://github.com/jacamo-lang/jacamo/blob/master/doc/readme.adoc[currently on GitHub].
