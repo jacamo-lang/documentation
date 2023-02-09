@@ -128,7 +128,7 @@ The program for Bob (file `src/agt/bob.asl`) is:
 [source,jasonagent,linenums]
 .bob.asl
 ----
-+greeting(M)[source(A)] <- 
++greeting(M)[source(A)] <-  // plan to react to new beliefs
     .print("I received ",M," from ",A).
 ----
 
@@ -139,6 +139,6 @@ When you execute the application again, the output is:
 [bob] I received hello world. from alice
 ----
 
-As you can see at http://127.0.0.1:3272, Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"`` and `A` to `alice`.
+As you can see at http://127.0.0.1:3272, Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"` and `A` to `alice`.
 
 image:./screen1.png[Bob's Mind]
