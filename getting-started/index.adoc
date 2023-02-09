@@ -26,8 +26,7 @@ NOTE: As a getting  started, the environment and organisation dimensions of JaCa
 
 ifdef::env-github[:outfilesuffix: .adoc]
 
-The following commands will create a new JaCaMo application with some initial code for agents,  environment and organisation. 
-NOTE: The first time you run takes longer since it downloads JaCaMo.
+The following commands will create a new JaCaMo application with some initial code for agents,  environment and organisation. (The first time you run JaCaMo takes longer since it downloads all dependencies.)
 
 
 Unix::
