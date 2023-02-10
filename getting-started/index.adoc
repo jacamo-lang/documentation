@@ -71,11 +71,11 @@ Several files and folders were created, the most relevant are:
     ├── agt            // Code for agents
     │   └── sample_agent.asl
     ├── env            // Code for environment
-    │   └── tools
+    │   └── example
     │       └── Counter.java
-    └── org            // Code for organisation
-        └── org.xml
-
+    ├── org            // Code for organisation
+    │   └── org.xml
+    └── test           // Code for testing
 ----
 
 = Execution
@@ -275,5 +275,55 @@ So both agents are incrementing the value of a shared counter. Alice is getting 
 [alice] I've got the unique value of 16
 ----
 
-
 = Playing roles
+
+Regarding the organisation dimension of our application, we will simply assign roles to agents. A role is a kind of ``place holder'' for agents in groups. We will create a group that Alice and Bob will join with roles `role1` and `role2`, respectively. 
+
+All possible groups and roles of an organisation should be specified in an XML file. Here we will use the specification that is already included in the initial project (file `src/org/org.xml`). This specification defines a group type identified by `group1` and the two mentioned roles for this group. To create instances of this group and assign its roles to our agents, you can change the application  project to:
+
+[source,jacamoproject,linenums]
+.my1st_app.jcm
+----
+mas my1st_app {
+
+  agent alice {
+    focus: w.c1 
+    roles: role1 in my_group
+  }
+  agent bob {
+    focus: w.c1 
+    roles: role2 in my_group
+  }
+
+  workspace w {
+    artifact c1: example.Counter(3) 
+  }
+
+  organisation o1 : org.xml {
+    // create a group instance identified by my_group
+    group my_group: group1
+  } 
+}
+
+----
+Now you can run the application and inspect the organisation state at http://127.0.0.1:3271:
+
+image:./screen-org1.png[Org State]
+
+From agent side, the organisation provides several information for the agents consideration:
+
+image:./screen-mind3.png[Bob's Mind]
+
+From the agent side, we will change Alice's program so that instead of sending a message to Bob, she sends a message to an agent playing role `role2`:
+
+[source,jasonagent,linenums]
+.alice.asl
+----
+// new plan to  achiee say_hello
++!say_hello
+   <- .wait(500);        // wait a bit for role adoption
+      ?play(Ag,role2,_); // consult the agent playing role2, var Ag is bound to the name of agent playing role2
+      .send(Ag,tell,greeting("hello world")).
+----
+
+Using this implementation, Alice's program is not tightly coupled with Bob anymore. Another agent can replace Bob as the player of `role2` and Alice keeps running correctly. 

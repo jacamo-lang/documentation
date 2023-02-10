@@ -1,15 +1,16 @@
-//!count. // initial goal
+!count. // initial goal
 
-+greeting(M)[source(A)] <-  // plan to react to new beliefs
-    .print("I received ",M," from ",A).
+// plan to react to new beliefs
++greeting(M)[source(A)]
+   <- .print("I received ",M," from ",A).
 
 // plan to achieve goal count
 +!count 
-   <- inc;
-      .wait(2000);
-      !count.
+   <- inc;          // act on the  environment
+      .wait(2000);  // wait a bit and
+      !count.       // keep counting
 
-// plan to react to new belief
+// plan to react to new changes in count belief
 +count(X)
    <- .print("counter = ",X).
 
