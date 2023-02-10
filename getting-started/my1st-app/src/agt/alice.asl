@@ -4,8 +4,7 @@
 
 // plan to achieve goal say_hello
 +!say_hello
-   <- .wait(500);        // wait a bit for role adoption
-      ?play(Ag,role2,_); // consult the agent playing role2, var Ag is bound to the name of agent playing role2
+   <- .wait(play(Ag,role2,_)); // consult the agent playing role2, var Ag is bound to the name of agent playing role2
       .send(Ag,tell,greeting("hello world")).
 
 // plan to achieve goal count

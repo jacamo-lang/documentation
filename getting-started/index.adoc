@@ -163,7 +163,7 @@ image:./screen-vsc1.png[VSC]
 
 The environment provides perception for the agents and is where their actions take place. In our application, agents will share an artifact of the environment to get unique identifiers. This kind of artifact is already included in the initial project.  It  is in file `src/env/tools/Counter.java`, so you do not need  to implement it. We will focus thus on how agents use it.
 
-First, you need to set up our MAS environment with an instance of the counter artifact. Second, our agents should ``look'' at this artifact. These set up can be done changing the application file:
+First, you need to set up our MAS environment with an instance of the counter artifact. Second, our agents should "look" at this artifact. These set up can be done changing the application file:
 
 [source,jacamoproject,linenums]
 .my1st_app.jcm
@@ -187,6 +187,11 @@ mas my1st_app {
 Note that both agents are focusing on the same artifact (identified by `c1` in workspace `w`). This artifact provides a `count` belief. You can notice that by running the application and taking a look at the mind inspector:
 
 image:./screen-mind2.png[Bob's Mind]
+
+Now you can also inspect the environment state at http://127.0.0.1:3273:
+
+image:./screen-env1.png[Env State]
+
 
 The artifact also provides two actions: `inc` and `inc_get`. The latter increments the counter and returns the new value. Let's change Alice's program to perform this action to continually increment the counter:
 
@@ -277,7 +282,7 @@ So both agents are incrementing the value of a shared counter. Alice is getting 
 
 = Playing roles
 
-Regarding the organisation dimension of our application, we will simply assign roles to agents. A role is a kind of ``place holder'' for agents in groups. We will create a group that Alice and Bob will join with roles `role1` and `role2`, respectively. 
+Regarding the organisation dimension of our application, in this getting started, we will simply assign roles to agents. A role is a kind of "place holder" for agents in groups. We will create a group that Alice and Bob will join with roles `role1` and `role2`, respectively. 
 
 All possible groups and roles of an organisation should be specified in an XML file. Here we will use the specification that is already included in the initial project (file `src/org/org.xml`). This specification defines a group type identified by `group1` and the two mentioned roles for this group. To create instances of this group and assign its roles to our agents, you can change the application  project to:
 
@@ -310,19 +315,19 @@ Now you can run the application and inspect the organisation state at http://127
 
 image:./screen-org1.png[Org State]
 
-From agent side, the organisation provides several information for the agents consideration:
+The organisation provides several information for the agents to consider:
 
 image:./screen-mind3.png[Bob's Mind]
 
-From the agent side, we will change Alice's program so that instead of sending a message to Bob, she sends a message to an agent playing role `role2`:
+For the agent programming, we will change Alice's program so that instead of sending a message to an agent named Bob, she sends a message to an agent playing `role2`:
 
 [source,jasonagent,linenums]
 .alice.asl
 ----
-// new plan to  achiee say_hello
+// new plan to achieve say_hello
 +!say_hello
-   <- .wait(500);        // wait a bit for role adoption
-      ?play(Ag,role2,_); // consult the agent playing role2, var Ag is bound to the name of agent playing role2
+   <- .wait(play(Ag,role2,_)); // waits for a belief play/3 with the second term equals role2. 
+                               // Ag is bound to the name of the agent playing role2
       .send(Ag,tell,greeting("hello world")).
 ----
 
