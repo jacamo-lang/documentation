@@ -1,0 +1,14 @@
+mas my1st_app {
+
+  agent alice {
+    focus: w.c1 
+  }
+  agent bob {
+    focus: w.c1 
+  }
+
+  workspace w {
+    artifact c1: example.Counter(3) 
+  }
+  
+}
