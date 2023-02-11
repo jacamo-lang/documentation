@@ -34,7 +34,7 @@ Unix::
 ----------------
 wget -q http://jacamo.sourceforge.net/nps/npss.zip
 unzip -u npss.zip
-./gradlew --console=plain -Dexec.args="--console"
+./gradlew -Dexec.args="--console"
 ----------------
 
 Windows::
