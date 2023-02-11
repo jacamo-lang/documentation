@@ -14,7 +14,7 @@ This guide walks you through the process of creating a Multi-Agent application u
 
 You will build a very simple Multi-Agent System composed of two agents that exchange simple messages. These agents are named Bob and Alice. In the application, Alice sends a hello message to Bob, they are situated in the same environment and participate into an organisation. 
 
-NOTE: As a getting  started, the environment and organisation dimensions of JaCaMo will not be explored here. 
+NOTE: As a getting started, the environment and organisation dimensions of JaCaMo will not be explored here. 
 
 = What You Need
 
@@ -26,7 +26,7 @@ NOTE: As a getting  started, the environment and organisation dimensions of JaCa
 
 ifdef::env-github[:outfilesuffix: .adoc]
 
-The following commands will create a new JaCaMo application with some initial code for agents,  environment and organisation. (The first time you run JaCaMo takes longer since it downloads all dependencies.)
+The following commands will create a new JaCaMo application with some initial source code for agents,  environment and organisation. (The first time you run JaCaMo takes longer since it downloads all dependencies.)
 
 
 Unix::
@@ -108,7 +108,7 @@ mas my1st_app {
 }
 ----
 
-The program of these agents are in files `alice.asl` and `bob.asl`, usually placed in the folder  `src/agt`. So create file `src/agt/alice.asl` as follows:
+The source codes of these agents are expected to be in the files `alice.asl` and `bob.asl` placed in the folder `src/agt`. So, create the file `src/agt/alice.asl` as follows:
 
 [source,jasonagent,linenums]
 .alice.asl
@@ -124,12 +124,12 @@ The program of these agents are in files `alice.asl` and `bob.asl`, usually plac
 { include("$moiseJar/asl/org-obedient.asl") }
 ----
 
-Briefly, this program states that Alice has one goal, created when she starts running. This goal can be achieved by a plan (in the two last lines) that simply sends a message to another agent named Bob telling him `greeting("hello world")`.
+This code states that Alice has one goal, created when she starts running. This goal can be achieved by a plan (3rd and 4th lines) that simply sends a message to another agent named Bob telling him `greeting("hello world")`.
 
-NOTE: details about the language used to program the agents and the language used for their communication is covered in other documents. 
+NOTE: details about the language used to code the agents and the language used for their communication is covered in other documents. 
 
 
-The program for Bob (file `src/agt/bob.asl`) is:
+The source code for Bob (file `src/agt/bob.asl`) is:
 
 
 [source,jasonagent,linenums]
@@ -144,7 +144,7 @@ The program for Bob (file `src/agt/bob.asl`) is:
 { include("$moiseJar/asl/org-obedient.asl") }
 ----
 
-Briefly, this plan states that as soon as he starts believing in a belief that matches `greeting(M)[source(A)]`, it prints out a message. This belief is added in his mind as the consequence of Alice's message. 
+This plan states that as soon as Bob has a belief that matches greeting(M)[source(A)], it prints out a message. This belief is added in his mind as the consequence of receiving Alice's message. 
 
 When you execute the application again, the output is:
 ----
@@ -193,7 +193,7 @@ Now you can also inspect the environment state at http://127.0.0.1:3273:
 image:./screen-env1.png[Env State]
 
 
-The artifact also provides two actions: `inc` and `inc_get`. The latter increments the counter and returns the new value. Let's change Alice's program to perform this action to continually increment the counter:
+The artifact also provides two actions: `inc` and `inc_get`. The latter increments the counter and returns the new value. Let's change Alice's source code to perform this action to continually increment the counter:
 
 [source,jasonagent,linenums]
 .alice.asl
@@ -219,7 +219,7 @@ The artifact also provides two actions: `inc` and `inc_get`. The latter incremen
 { include("$moiseJar/asl/org-obedient.asl") }
 ----
 
-Now, we will program Bob to also increment the counter continuously. Bob uses `inc` instead of `inc_get`, that has no parameter: it increments the counter by 1. Since changes in the counter produces changes in the belief `count`, Bob reacts to this changes printing the new perceived  value:
+Now, we will code Bob to also increment the counter continuously. Bob uses `inc` instead of `inc_get`, that has no parameter: it increments the counter by 1. Since changes in the counter produces changes in the belief `count`, Bob reacts to this changes printing the new perceived  value:
 
 [source,jasonagent,linenums]
 .alice.asl
@@ -319,7 +319,7 @@ The organisation provides several information for the agents to consider:
 
 image:./screen-mind3.png[Bob's Mind]
 
-For the agent programming, we will change Alice's program so that instead of sending a message to an agent named Bob, she sends a message to an agent playing `role2`:
+For the agent programming, we will change Alice's source code so that instead of sending a message to an agent named Bob, she sends a message to an agent playing `role2`:
 
 [source,jasonagent,linenums]
 .alice.asl
@@ -331,4 +331,4 @@ For the agent programming, we will change Alice's program so that instead of sen
       .send(Ag,tell,greeting("hello world")).
 ----
 
-Using this implementation, Alice's program is not tightly coupled with Bob anymore. Another agent can replace Bob as the player of `role2` and Alice keeps running correctly. 
+Using this implementation, Alice's code is not tightly coupled with Bob anymore. Another agent can replace Bob as the player of `role2` and Alice keeps running correctly. 
