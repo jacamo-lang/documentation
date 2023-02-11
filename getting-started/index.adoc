@@ -32,8 +32,8 @@ The following commands will create a new JaCaMo application with some initial co
 Unix::
 +
 ----------------
-curl -LO http://jacamo.sourceforge.net/nps/npss.zip
-unzip npss.zip
+wget -q http://jacamo.sourceforge.net/nps/npss.zip
+unzip -u npss.zip
 ./gradlew --console=plain -Dexec.args="--console"
 ----------------
 
