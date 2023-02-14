@@ -76,15 +76,25 @@ Several files and folders were created, the most relevant are:
 
 = Execution
 
-The application is ready to be executed with the command `./gradlew -q --console=plain` producing the following output:
+The application is ready to be executed with the commands:
+----
+cd my1st-app
+./gradlew -q --console=plain
+----
+producing the following output:
 
 ----
 CArtAgO Http Server running on http://127.0.0.1:3273
 Jason Http Server running on http://127.0.0.1:3272
-[sample_agent] hello world.
+[Cartago] Workspace w created.
+[Cartago] artifact c1: example.Counter(3) at w created.
+[bob] join workspace /main/w: done
+[bob] focusing on artifact c1 (at workspace /main/w) using namespace default
+[bob] focus on c1: done
+[bob] hello world.
 ----
 
-As you can see, an agent named `sample_agent` has printed a "Hello World" message. The agent however keeps running, even without having anything to do. To stop the execution,  you can press <CTRL>-C. 
+As you can see in the last line, an agent named `sample_agent` has printed a "Hello World" message. The agent however keeps running, even without having anything to do. To stop the execution,  you can press <CTRL>-C. 
 
 = Creating agents Alice and Bob
 
