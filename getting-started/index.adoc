@@ -32,8 +32,8 @@ The following commands will create a new JaCaMo application identified by `my1st
 Unix::
 +
 ----------------
-wget -q http://jacamo.sourceforge.net/nps/npss.zip
-unzip -u npss.zip
+wget -q http://jacamo-lang.github.io/jacamo/nps/npss.zip
+unzip npss.zip
 ./gradlew -Dexec.args="my1st-app --console"
 ----------------
 
@@ -157,7 +157,7 @@ Execute the application again with the command `./gradlew -q --console=plain` an
 [bob] I received hello world from alice
 ----
 
-As you can see in the _Mind Inspector_ (at http://127.0.0.1:3272), Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"` and `A` to `alice`.
+You can now open the Mind Inspector by clicking at http://127.0.0.1:3272 and select `bob` in the list of agents. As you can see, Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"` and `A` to `alice`.
 
 image:./screen-mind1.png[Bob's Mind]
 
