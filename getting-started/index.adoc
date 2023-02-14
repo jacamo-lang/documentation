@@ -20,7 +20,7 @@ NOTE: As a getting started, the environment and organisation dimensions of JaCaM
 
 * Java 17 or newer
 * A shell terminal
-* A text editor
+* A text editor (Visual Studio Code, Notepad, ...)
 
 = Creating an initial application
 
@@ -84,7 +84,7 @@ Jason Http Server running on http://127.0.0.1:3272
 [sample_agent] hello world.
 ----
 
-As you can see, an agent named `sample_agent` has printed a "Hello World" message.
+As you can see, an agent named `sample_agent` has printed a "Hello World" message. The agent however keeps running, even without having nothing to do. To stop the execution,  you can press <CTRL>-C. 
 
 = Creating agents Alice and Bob
 
@@ -142,16 +142,16 @@ The source code for Bob (file `src/agt/bob.asl`) is:
 
 This plan states that as soon as Bob has a belief that matches greeting(M)[source(A)], it prints out a message. This belief is added in his mind as the consequence of receiving Alice's message. 
 
-When you execute the application again, the output is:
+Execute the application again with the command `./gradlew -q --console=plain` and now the output is:
 ----
 [bob] I received hello world from alice
 ----
 
-As you can see at http://127.0.0.1:3272, Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"` and `A` to `alice`.
+As you can see in the _Mind Inspector_ (at http://127.0.0.1:3272), Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"` and `A` to `alice`.
 
 image:./screen-mind1.png[Bob's Mind]
 
-It follows also a screenshot of the project execution when using  Visual Sudio Code as the IDE.
+It follows also a screenshot of the project execution when using  Visual Studio Code as the IDE.
 
 image:./screen-vsc1.png[VSC]
 
@@ -218,7 +218,7 @@ The artifact also provides two actions: `inc` and `inc_get`. The latter incremen
 Now, we will code Bob to also increment the counter continuously. Bob uses `inc` instead of `inc_get`, that has no parameter: it increments the counter by 1. Since changes in the counter produces changes in the belief `count`, Bob reacts to this changes printing the new perceived  value:
 
 [source,jasonagent,linenums]
-.alice.asl
+.bob.asl
 ----
 // *** initial goal
 !count. 
