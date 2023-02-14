@@ -84,7 +84,7 @@ Jason Http Server running on http://127.0.0.1:3272
 [sample_agent] hello world.
 ----
 
-As you can see, an agent named `sample_agent` has printed a "Hello World" message. The agent however keeps running, even without having nothing to do. To stop the execution,  you can press <CTRL>-C. 
+As you can see, an agent named `sample_agent` has printed a "Hello World" message. The agent however keeps running, even without having anything to do. To stop the execution,  you can press <CTRL>-C. 
 
 = Creating agents Alice and Bob
 
