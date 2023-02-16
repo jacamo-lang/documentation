@@ -14,7 +14,6 @@ This guide walks you through the process of creating a Multi-Agent application u
 
 You will build a very simple Multi-Agent System composed of two agents that exchange simple messages. These agents are named Bob and Alice. In the application, Alice sends a hello message to Bob, they are situated in the same environment and participate into an organisation. 
 
-NOTE: As a getting started, the environment and organisation dimensions of JaCaMo will not be explored here. 
 
 = What You Need
 
@@ -38,7 +37,7 @@ unzip npss.zip
 ----------------
 
 Windows::
-1. Download http://jacamo.sourceforge.net/nps/npss.zip
+1. Download http://jacamo-lang.github.io/jacamo/nps/npss.zip
 2. Unzip
 3. Run `gradlew.bat`. When asked to give an identification, you should answer `my1st-app`.
 
@@ -130,7 +129,7 @@ The source codes of these agents are expected to be in the files `alice.asl` and
 { include("$moiseJar/asl/org-obedient.asl") }
 ----
 
-This code states that Alice has one goal, created when she starts running. This goal can be achieved by a plan (3rd and 4th lines) that simply sends a message to another agent named Bob telling him `greeting("hello world")`.
+This code states that Alice has one goal, created when Alice starts running. This goal can be achieved by a plan (3rd and 4th lines) that simply sends a message to another agent named Bob telling him `greeting("hello world")`.
 
 NOTE: details about the language used to code the agents and the language used for their communication is covered in other documents. 
 
@@ -253,7 +252,7 @@ Now, we will code Bob to also increment the counter continuously. Bob uses `inc`
 { include("$moiseJar/asl/org-obedient.asl") }
 ----
 
-So both agents are incrementing the value of a shared counter. Alice is getting unique values (for purposes not considered here) and Bob is just printing the values as he perceives them:
+So both agents are incrementing the value of a shared counter. Alice is getting unique values (for purposes not considered here) and Bob is just printing the values as soon as they are perceived:
 
 ----
 [bob] counter = 3
@@ -325,7 +324,7 @@ The organisation provides several information for the agents to consider:
 
 image:./screen-mind3.png[Bob's Mind]
 
-For the agent programming, we will change Alice's source code so that instead of sending a message to an agent named Bob, she sends a message to an agent playing `role2`:
+For the agent programming, we will change Alice's source code so that instead of sending a message to an agent named Bob, Alice sends a message to an agent playing `role2`:
 
 [source,jasonagent,linenums]
 .alice.asl
