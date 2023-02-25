@@ -294,7 +294,26 @@ All possible groups and roles of an organisation should be specified in an XML f
 [source,jacamoproject,linenums]
 .my1st_app.jcm
 ----
-include::code/my1st-app/my1st_app.jcm[]
+mas my1st_app {
+
+  agent alice {
+    focus: w.c1 
+    roles: role1 in my_group
+  }
+  agent bob {
+    focus: w.c1 
+    roles: role2 in my_group
+  }
+
+  workspace w {
+    artifact c1: example.Counter(3) 
+  }
+
+  organisation o1 : org.xml {
+    // create a group instance identified by my_group
+    group my_group: group1
+  } 
+}
 ----
 Now you can run the application and inspect the organisation state at http://127.0.0.1:3271:
 

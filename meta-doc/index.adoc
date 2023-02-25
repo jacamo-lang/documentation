@@ -106,8 +106,9 @@ and
 ----
 ....
 
+NOTE: https://docs.asciidoctor.org/asciidoc/latest/directives/include/[Including files] from `code` directory is not suggested for now! It works on the the produced HTML, but unfortunately do not work when reading the documentation directly on GitHub.
 
-NOTE: to be revised when syntax highlight is implemented.
+NOTE: some guidelines should to be revised when syntax highlight is implemented.
 
 
 == More on AsciiDoc
