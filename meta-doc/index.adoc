@@ -13,7 +13,7 @@ This document presents some guidelines for writing documentation for JaCaMo.
 
 The preferred documentation tool is https://asciidoc.org[AsciiDoc]. Of course, in some circumstances other formats are more suited. When someone commit and push `.adoc` files into  the JaCaMo-doc repository, they are automatically translated into  HTML and placed  in the https://jacamo-lang.github.io/documentation/[JaCaMo web site].
 
-= Files and Folders
+== Files and Folders
 
 * Every document has its own folder. 
 * `index.adoc` is the entry point.
@@ -37,9 +37,9 @@ getting-started
     └── screen-vsc1.png
 ----
 
-= AsciiDoc details
+== AsciiDoc details
 
-== Preamble
+=== Preamble
 
 The proposed preamble of AsciiDoc documents is:
 
@@ -56,7 +56,7 @@ The proposed preamble of AsciiDoc documents is:
 ifdef::env-github[:outfilesuffix: .adoc]
 ----
 
-== Links 
+=== Links 
 
 Links to other documents available in JaCaMo doc repository should be written  as relative links without the explicit file extension (because inside GitHub `.adoc` is used, but the web site uses `.html` instead).
 
@@ -70,7 +70,7 @@ that produces:
 It is detailed in link:../getting-started/index{outfilesuffix}[Getting Started]
 ====
 
-== Programs
+=== Programs
 
 Programs should be formatted following the link:../programming-style/index{outfilesuffix}[JaCaMo programming style for source code]. Source code should be included into the AsciiDoc files as follows:
 
@@ -111,6 +111,6 @@ NOTE: https://docs.asciidoctor.org/asciidoc/latest/directives/include/[Including
 NOTE: some guidelines should to be revised when syntax highlight is implemented.
 
 
-== More on AsciiDoc
+=== More on AsciiDoc
 
 is found at https://docs.asciidoctor.org/asciidoc/latest[here].

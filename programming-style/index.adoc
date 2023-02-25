@@ -20,9 +20,9 @@ This document serves as the guide for writing source code for JaCaMo application
 
 === Identifiers 
 
-For identifiers created in AgentSpeak and organisation (as goals, terms, roles, missions), https://en.wikipedia.org/wiki/Snake_case[snake style] is suggested. For instance: `open_door`, `professor`, `defense_group`.
+For identifiers created in AgentSpeak and organisation (as goals, constants, variables, roles, missions), https://en.wikipedia.org/wiki/Snake_case[snake style] is suggested. For instance: `open_door` (goal), `My_Group` (variable), `bob` (constant), `professor` (role), `defense_group` (group type).
 
-However, for identifiers created in Java (as observable properties and actions), the https://en.wikipedia.org/wiki/Camel_case[camel style] is suggested. For instance: `doorColor(blue)`, `openDoor`.
+However, for identifiers created in Java (as observable properties and operations), the https://en.wikipedia.org/wiki/Camel_case[camel style] is suggested. For instance: `doorColor(blue)`, `openDoor`.
 
 NOTE: to be discussed.
 
