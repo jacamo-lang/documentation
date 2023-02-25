@@ -12,10 +12,73 @@ ifdef::env-github[:outfilesuffix: .adoc]
 
 This document serves as the guide for writing source code for JaCaMo applications.
 
-*to be written*
+*to be enriched, discussed and revised*
 
-see https://google.github.io/styleguide/javaguide.html
+//== JaCaMo application files (.jcm)
 
-use snake style  https://www.freecodecamp.org/news/snake-case-vs-camel-case-vs-pascal-case-vs-kebab-case-whats-the-difference/
+== AgentSpeak (.asl)
 
-for Java, we could simply go with the Google's Java style guide: https://google.github.io/styleguide/javaguide.html
+=== Identifiers 
+
+For identifiers created in AgentSpeak and organisation (as goals, terms, roles, missions), https://en.wikipedia.org/wiki/Snake_case[snake style] is suggested. For instance: `open_door`, `professor`, `defense_group`.
+
+However, for identifiers created in Java (as observable properties and actions), the https://en.wikipedia.org/wiki/Camel_case[camel style] is suggested. For instance: `doorColor(blue)`, `openDoor`.
+
+NOTE: to be discussed.
+
+=== Plans
+
+Regarding plans, simple plans should be written in a single line:
+
+[source,jasonagent]
+----
++raining : i_have_umbrella <- go.
+----
+
+A plan with multiple lines should follow the style:
+
+[source,jasonagent]
+----
++raining 
+    :  not i_have_umbrella 
+       & v(X) & X > 10
+    <- doA;
+       doB;
+       .wait(something);
+       !goal2.
+----
+
+Remarks:
+
+*  `:` and `\<-` are aligned, as well as `not` and  `doA` (i.e., two spaces after `:`).
+* the first `&` is placed in the same line as `v(X) & X >  10`, so it simplifies to comment this condition. 
+
+The final `.` can also be place into a  new line aligned with `\<-`:
+
+[source,jasonagent]
+----
++raining 
+    :  not i_have_umbrella 
+       & v(X) & X > 10
+    <- doA;
+       doB;
+       .wait(something);
+       !goal2;
+    .
+----
+
+It simplifies commenting the last line of the plan and can be seen as _ending_  the body that started at `\<-`. It may remember how `{` and `}` are aligned to mark the begin and end of block in some styles.
+
+=== Comments
+
+no rules for comments (?). 
+
+
+
+
+
+== Artifacts
+
+Since artifacts are written in Java, we recommend the https://google.github.io/styleguide/javaguide.html[Google's Java style guide].
+
+
