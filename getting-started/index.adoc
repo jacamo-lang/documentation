@@ -294,6 +294,8 @@ All possible groups and roles of an organisation should be specified in an XML f
 [source,jacamoproject,linenums]
 .my1st_app.jcm
 ----
+include::code/my1st-app/my1st_app.jcm
+
 mas my1st_app {
 
   agent alice {
