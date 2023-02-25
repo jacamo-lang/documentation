@@ -62,13 +62,12 @@ Links to other documents available in JaCaMo doc repository should be written  a
 
 Example:
 ----
-It is detailed in
-link:../getting-started/index{outfilesuffix}[Getting Started]
+It is detailed in link:../getting-started/index{outfilesuffix}[Getting Started]
 ----
 
 that produces:
 ====
-It is detailed in link:./getting-started/index{outfilesuffix}[Getting Started]
+It is detailed in link:../getting-started/index{outfilesuffix}[Getting Started]
 ====
 
 == Programs
