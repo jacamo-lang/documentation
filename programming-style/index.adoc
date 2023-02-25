@@ -1,0 +1,21 @@
+# JaCaMo programming style
+:toc: right
+:author: JaCaMo Team
+:date: March 2023
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
+:icons: font
+:prewrap!:
+
+ifdef::env-github[:outfilesuffix: .adoc]
+
+
+This document serves as the guide for writing source code for JaCaMo applications.
+
+[to be written]
+
+see https://google.github.io/styleguide/javaguide.html
+
+use snake style  https://www.freecodecamp.org/news/snake-case-vs-camel-case-vs-pascal-case-vs-kebab-case-whats-the-difference/
+
+for Java, we could simply go with the Google’s Java style guide: https://google.github.io/styleguide/javaguide.html
