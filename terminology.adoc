@@ -9,7 +9,9 @@
 
 ifdef::env-github[:outfilesuffix: .adoc]
 
-agent:: an agent is ....
+// anchors are enclosed by << and >>
+
+agent:: <<agent>> an agent is ....
 
 -----
 a
@@ -59,4 +61,10 @@ asdf
 d
 -----
 
-environment:: environment is ...
+environment:: <<environment>> environment is ...
+
+organization:: <<organization>>
+
+JaCaMo Application:: <<JaCaMo_Application>>
+
+
