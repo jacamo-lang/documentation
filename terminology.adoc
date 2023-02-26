@@ -1,0 +1,62 @@
+# Terminology
+:toc: right
+:author: JaCaMo Team
+:date: February 2023
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
+:icons: font
+:prewrap!:
+
+ifdef::env-github[:outfilesuffix: .adoc]
+
+agent:: an agent is ....
+
+-----
+a
+a
+a
+
+a
+a
+a
+a
+df
+a
+df
+ad
+f
+adf
+ad
+f
+adf
+a
+df
+ad
+f
+ad
+fa
+df
+a
+df
+ad
+fa
+df
+ad
+fad
+sf
+adfa
+df
+df
+ad
+f
+adf
+ad
+fadf
+asdf
+
+
+
+d
+-----
+
+environment:: environment is ...

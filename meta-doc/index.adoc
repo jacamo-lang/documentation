@@ -13,17 +13,17 @@ This document presents some guidelines for writing documentation for JaCaMo.
 
 The preferred documentation tool is https://asciidoc.org[AsciiDoc]. Of course, in some circumstances other formats are more suited. When someone commit and push `.adoc` files into  the JaCaMo-doc repository, they are automatically translated into  HTML and placed  in the https://jacamo-lang.github.io/documentation/[JaCaMo web site].
 
-== Global considerations (from our last meetings)
+== Global Considerations
 
 * The documentation repository consolidates all the docs of all JaCaMo repositories that are not directly written alongside the code (in the actual program code files). 
 * The documentation repository contains the JaCaMo project overview page. 
-* The documetations are all deployed to the same domain.
+* The documentations are all deployed to the same domain.
 * The Java Doc/API documentation should be hosted there as well. 
-* Ideally, workflows (GitHub Actions) will be configured to automatically update the deployed docs when the source (either ‘non-code’ docs or Java doc) has been changed.
-* Avoid the use of stale technologies in the doc:
+//* Ideally, workflows (GitHub Actions) will be configured to automatically update the deployed docs when the source (either ‘non-code’ docs or Java doc) has been changed.
+* Avoid the use of stale technologies in the doc
 
-** Move from Atom to VSCode
-** Consider moving from Eclipse to IntelliJ
+//** Move from Atom to VSCode
+//** Consider moving from Eclipse to IntelliJ
 
 == Files and Folders
 
