@@ -9,67 +9,34 @@
 
 ifdef::env-github[:outfilesuffix: .adoc]
 
-// anchors are enclosed by << and >>
+// anchors are enclosed by [[ and ]]
 
-agent:: <<agent>> an agent is ....
+= Agent Dimension
 
------
-a
-a
-a
+Agent:: [[agent]] an agent is ....
 
-a
-a
-a
-a
-df
-a
-df
-ad
-f
-adf
-ad
-f
-adf
-a
-df
-ad
-f
-ad
-fa
-df
-a
-df
-ad
-fa
-df
-ad
-fad
-sf
-adfa
-df
-df
-ad
-f
-adf
-ad
-fadf
-asdf
+Goal:: [[goal]] a goal is ....
 
+Belief:: [[belief]] a belief is ....
 
-
-d
------
-
-
-organization:: <<organization>>
-
-<<JaCaMo Application,JaCaMo_Application>>:: to be written
-
-test without list
+= Environment Dimension
 
 Environment:: [[environment]] environment is ...
 
-****
-a <<goal>> is TBW
-****
+= Organisation Dimension
+
+Organisation:: [[organization]] [[organisation]]...
+
+Group:: [[group]] group  ...
+
+Group Instance:: [[group_instance]] group  ...
+
+Role:: [[role]] ...
+
+= Communication
+
+Message:: [[message]] a message is ....
+
+= JaCaMo Platform
+
+JaCaMo Application:: [[JaCaMo_Application]] to be written
