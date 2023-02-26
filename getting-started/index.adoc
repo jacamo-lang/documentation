@@ -158,11 +158,11 @@ Execute the application again with the command `./gradlew -q --console=plain` an
 
 You can now open the Mind Inspector by clicking at http://127.0.0.1:3272 and select `bob` in the list of agents. As you can see, Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"` and `A` to `alice`.
 
-image:./img/screen-mind1.png[Bob's Mind]
+image:./figs/screen-mind1.png[Bob's Mind]
 
 It follows also a screenshot of the project execution when using  Visual Studio Code as the IDE.
 
-image:./img/screen-vsc1.png[VSC]
+image:./figs/screen-vsc1.png[VSC]
 
 = Sharing an environment
 
@@ -191,11 +191,11 @@ mas my1st_app {
 
 Note that both agents are focusing on the same artifact (identified by `c1` in workspace `w`). This artifact provides a `count` perception to the agents, which is stored in their belief base. You can notice that by running the application and taking a look at the mind inspector:
 
-image:./img/screen-mind2.png[Bob's Mind]
+image:./figs/screen-mind2.png[Bob's Mind]
 
 Now you can also inspect the environment state at http://127.0.0.1:3273:
 
-image:./img/screen-env1.png[Env State]
+image:./figs/screen-env1.png[Env State]
 
 
 The artifact also provides two actions: `inc` and `inc_get`. The latter increments the counter and returns the new value. Let's change Alice's source code to perform this action to continually increment the counter:
@@ -317,11 +317,11 @@ mas my1st_app {
 ----
 Now you can run the application and inspect the organisation state at http://127.0.0.1:3271:
 
-image:./img/screen-org1.png[Org State]
+image:./figs/screen-org1.png[Org State]
 
 The organisation provides several information for the agents to consider:
 
-image:./img/screen-mind3.png[Bob's Mind]
+image:./figs/screen-mind3.png[Bob's Mind]
 
 For the agent programming, we will change Alice's source code so that instead of sending a message to an agent named Bob, Alice sends a message to an agent playing `role2`:
 

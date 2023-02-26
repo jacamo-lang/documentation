@@ -28,7 +28,7 @@ getting-started
 │   └── my1st-app
 │       ├── my1st_app.jcm
 │       └── src
-└── img
+└── figs
     ├── screen-env1.png
     ├── screen-mind1.png
     ├── screen-mind2.png
