@@ -26,7 +26,7 @@ You will build a very simple Multi-Agent System composed of two agents that exch
 ifdef::env-github[:outfilesuffix: .adoc]
 
 
-The following commands will create a new xref:terminology.adoc#JaCaMo_Appplication[JaCaMo application] identified by `*my1st-app*` with some initial source code for xref:termnology.adoc#agent[agents], xref:terminology.adoc#environment[environment] and xref:terminology.adoc#organisation[organisation]. (The first time you run JaCaMo takes longer since it downloads all dependencies.)
+The following commands will create a new xref:../terminology.adoc#JaCaMo_Appplication[JaCaMo application] identified by `*my1st-app*` with some initial source code for xref:../termnology.adoc#agent[agents], xref:../terminology.adoc#environment[environment] and xref:../terminology.adoc#organisation[organisation]. (The first time you run JaCaMo takes longer since it downloads all dependencies.)
 
 Unix::
 +
