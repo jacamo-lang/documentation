@@ -61,10 +61,15 @@ asdf
 d
 -----
 
-<<environment>>:: environment is ...
 
 organization:: <<organization>>
 
-JaCaMo Application:: <<JaCaMo_Application>>
+<<JaCaMo Application,JaCaMo_Application>>:: to be written
 
+test without list
 
+<<environment>> is ...
+
+****
+a <<goal>> is TBW
+****
