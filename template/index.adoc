@@ -1,0 +1,59 @@
+# Title
+:toc: right
+:author: JaCaMo Team
+:date: February 2023
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
+:icons: font
+:prewrap!:
+
+ifdef::env-github[:outfilesuffix: .adoc]
+
+Brief description
+
+
+= What You Will Build
+
+= What You Need
+
+* Java 17 or newer
+* A shell terminal
+* A text editor (Visual Studio Code, Notepad, ...)
+
+= Section 1
+
+a link to other doc link:../programming-style/index{outfilesuffix}[JaCaMo programming style for source code]
+
+a link to terminology
+
+=== source example
+
+[source,jacamoproject,linenums]
+.template.jcm
+----
+mas my1st_app {
+
+    agent alice
+    agent bob
+
+}
+----
+
+
+[source,jasonagent,linenums]
+.template.asl
+----
+!say_hello.   // initial goal
+
++!say_hello   // plan to achieve goal say_hello
+   <- .send(bob,tell,greeting("hello world")).
+
+// some usual includes for JaCaMo projects:
+{ include("$jacamoJar/templates/common-cartago.asl") }
+{ include("$jacamoJar/templates/common-moise.asl") }
+{ include("$moiseJar/asl/org-obedient.asl") }
+----
+
+
+= What you have learnt
+

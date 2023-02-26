@@ -49,6 +49,26 @@ getting-started
     └── screen-vsc1.png
 ----
 
+You can start your document by copying the structure from the template:
+
+----
+cp -r template your-doc-name
+----
+
+This template has `code` and `figs` directories, so remove them if their are not necessary.
+
+== Proposed TOC
+
+The proposed sections are:
+
+- What You Will Build
+- What You Need
+- Initial code
+- other sections
+- What you have learnt
+
+Of course, different documents may have other structure. 
+
 == AsciiDoc details
 
 === Preamble

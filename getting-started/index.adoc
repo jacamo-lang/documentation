@@ -336,3 +336,11 @@ For the agent programming, we will change Alice's source code so that instead of
 ----
 
 Using this implementation, Alice's code is not tightly coupled with Bob anymore. Another agent can replace Bob as the player of `role2` and Alice keeps running correctly. 
+
+= What you have learnt
+
+In this brief tutorial, you have learnt:
+
+- how to create a JaCaMo Project,
+- how the source code of the project is usually structured, and
+- how to execute and see the current state of a JaCaMo application.
