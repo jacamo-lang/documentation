@@ -26,7 +26,7 @@ You will build a very simple Multi-Agent System composed of two agents that exch
 ifdef::env-github[:outfilesuffix: .adoc]
 
 
-The following commands will create a new xref:../terminology.adoc#JaCaMo_Appplication[JaCaMo application] identified by `*my1st-app*` with some initial source code for xref:../termnology.adoc#agent[agents], xref:../terminology.adoc#environment[environment] and xref:../terminology.adoc#organisation[organisation]. (The first time you run JaCaMo takes longer since it downloads all dependencies.)
+The following commands will create a new xref:../terminology.adoc#jacamo_application[JaCaMo application] identified by `*my1st-app*` with some initial source code for xref:../terminology.adoc#agent[agents], xref:../terminology.adoc#environment[environment] and xref:../terminology.adoc#organization[organization]. (The first time you run JaCaMo takes longer since it downloads all dependencies.)
 
 Unix::
 +
@@ -95,9 +95,9 @@ Jason Http Server running on http://127.0.0.1:3272
 
 As you can see in the last line, an agent named `sample_agent` has printed a "Hello World" message. The JaCaMo Application however keeps running, even without having anything to do. To stop the execution,  you can press <CTRL>-C. 
 
-= Creating agents Alice and Bob
+= Creating agents alice and bob
 
-So, you will now remove this `sample_agent` from the application and add Alice and Bob.  
+So, you will now remove this `sample_agent` from the application and add alice and bob.  
 
 The file `my1st_app.jcm` contains the list of initial agents of the MAS. Edit this file so that is looks as follows:
 
@@ -129,12 +129,12 @@ The source codes of these agents are expected to be in the files `alice.asl` and
 { include("$moiseJar/asl/org-obedient.asl") }
 ----
 
-This code states that Alice has one xref:../terminology.adoc#goal[goal], created when Alice starts running. This goal can be achieved by a xref:../terminology.adoc#plan[plan] (3rd and 4th lines) that simply sends a xref:../terminology.adoc#plan[message] to another agent named Bob telling him `greeting("hello world")`.
+This code states that alice has one xref:../terminology.adoc#goal[goal], created when alice starts running. This goal can be achieved by a xref:../terminology.adoc#plan[plan] (3rd and 4th lines) that simply sends a xref:../terminology.adoc#message[message] to another agent named bob telling him `greeting("hello world")`.
 
 NOTE: details about the language used to code the agents and the language used for their communication is covered in other documents. 
 
 
-The source code for Bob (file `src/agt/bob.asl`) is:
+The source code for bob (file `src/agt/bob.asl`) is:
 
 
 [source,jasonagent,linenums]
@@ -149,16 +149,16 @@ The source code for Bob (file `src/agt/bob.asl`) is:
 { include("$moiseJar/asl/org-obedient.asl") }
 ----
 
-This plan states that as soon as Bob has a xref:../terminology.adoc#belief[belief] that matches `greeting(M)[source(A)]`, it prints out a message. This belief is added in his mind as the consequence of receiving Alice's message. 
+This plan states that as soon as bob has a xref:../terminology.adoc#belief[belief] that matches `greeting(M)[source(A)]`, it prints out a message. This belief is added in his mind as the consequence of receiving alice's message. 
 
 Execute the application again with the command `./gradlew -q --console=plain` and now the output is:
 ----
 [bob] I received hello world from alice
 ----
 
-You can now open the Mind Inspector by clicking at http://127.0.0.1:3272 and select `bob` in the list of agents. As you can see, Bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"` and `A` to `alice`.
+You can now open the Mind Inspector by clicking at http://127.0.0.1:3272 and select `bob` in the list of agents. As you can see, bob's belief is `greeting("hello world")[source(alice)]`. When his plan is executed, variable `M` is bound to  `"hello world"` and `A` to `alice`.
 
-image:./figs/screen-mind1.png[Bob's Mind]
+image:./figs/screen-mind1.png[bob's Mind]
 
 It follows also a screenshot of the project execution when using  Visual Studio Code as the IDE.
 
@@ -168,9 +168,9 @@ image:./figs/screen-vsc1.png[VSC]
 
 // TODO: link to terminology
 
-The environment provides perception for the agents and is where their actions take place. In our application, agents will share an artifact of the environment to get unique identifiers. This kind of artifact is already included in the initial project.  It  is in file `src/env/tools/Counter.java`, so you do not need  to implement it. We will focus thus on how agents use it.
+The environment provides perception for the agents and is where their actions take place. In our application, agents will share an artifact of the environment to get unique identifiers. This kind of artifact is already included in the initial project.  It is in file `src/env/tools/Counter.java`, so you do not need to implement it. We will focus thus on how agents use it.
 
-First, you need to set up our MAS environment with an instance of the counter artifact. Second, our agents should focus on this artifact. These set up can be done changing the application file:
+First, you need to set up our MAS environment with an instance of the Counter artifact. Second, our agents should focus on this artifact. These set up can be done changing the application file:
 
 [source,jacamoproject,linenums]
 .my1st_app.jcm
