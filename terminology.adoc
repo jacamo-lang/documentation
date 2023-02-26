@@ -61,7 +61,7 @@ asdf
 d
 -----
 
-environment:: <<environment>> environment is ...
+environment:: environment is ...
 
 organization:: <<organization>>
 

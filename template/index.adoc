@@ -28,7 +28,7 @@ to be downloaded
 
 a link to other doc link:../programming-style/index{outfilesuffix}[JaCaMo programming style for source code]
 
-a link to terminology: this xref:../terminology.adoc#agent[agent] is situated in an xref:../terminology.adoc#agent[environment]!
+a link to terminology: this xref:../terminology.adoc#agent[agent] is situated in an xref:../terminology.adoc#environment[environment]!
 
 === source example
 
