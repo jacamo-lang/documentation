@@ -68,7 +68,7 @@ organization:: <<organization>>
 
 test without list
 
-<<environment>> is ...
+[[environment]] environment is ...
 
 ****
 a <<goal>> is TBW
