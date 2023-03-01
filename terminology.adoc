@@ -7,7 +7,6 @@
 :icons: font
 :prewrap!:
 
-ifdef::env-github[:outfilesuffix: .adoc]
 
 // anchors are enclosed by [[ and ]]
 

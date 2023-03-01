@@ -7,8 +7,6 @@
 :icons: font
 :prewrap!:
 
-ifdef::env-github[:outfilesuffix: .adoc]
-
 Brief description
 
 
@@ -26,7 +24,7 @@ to be downloaded
 
 = Section 1
 
-a link to other doc link:../programming-style/index{outfilesuffix}[JaCaMo programming style for source code]
+a link to other doc xref:../programming-style/index.adoc[JaCaMo programming style for source code]
 
 a link to terminology: this xref:../terminology.adoc#agent[agent] is situated in an xref:../terminology.adoc#environment[environment]!
 

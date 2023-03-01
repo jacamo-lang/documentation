@@ -7,7 +7,6 @@
 :icons: font
 :prewrap!:
 
-ifdef::env-github[:outfilesuffix: .adoc]
 
 This document presents some guidelines for writing documentation for JaCaMo.
 
@@ -84,27 +83,25 @@ The proposed preamble of AsciiDoc documents is:
 :coderay-linenums-mode: inline
 :icons: font
 :prewrap!:
-
-ifdef::env-github[:outfilesuffix: .adoc]
 ----
 
 === Links 
 
-Links to other documents available in JaCaMo doc repository should be written  as relative links without the explicit file extension (because inside GitHub `.adoc` is used, but the web site uses `.html` instead).
+Links to other documents available in JaCaMo doc repository should be written  as relative links using `xref`. With `xref` `.adoc` is properly replaced by `.html` when necessary).
 
 Example:
 ----
-It is detailed in link:../getting-started/index{outfilesuffix}[Getting Started]
+It is detailed in xref:../getting-started/index.adoc[Getting Started]
 ----
 
 that produces:
 ====
-It is detailed in link:../getting-started/index{outfilesuffix}[Getting Started]
+It is detailed in lxref:../getting-started/index.adoc[Getting Started]
 ====
 
 === Programs
 
-Programs should be formatted following the link:../programming-style/index{outfilesuffix}[JaCaMo programming style for source code]. Source code should be included into the AsciiDoc files as follows:
+Programs should be formatted following the xref:../programming-style/index.adoc[JaCaMo programming style for source code]. Source code should be included into the AsciiDoc files as follows:
 
 [source,asciidoc]
 ....
