@@ -10,7 +10,6 @@
 
 This document serves as the guide for writing source code for JaCaMo applications.
 
-*to be enriched, discussed and revised*
 
 //== JaCaMo application files (.jcm)
 
@@ -20,9 +19,53 @@ This document serves as the guide for writing source code for JaCaMo application
 
 For identifiers created in AgentSpeak and organisation (as goals, constants, variables, roles, missions), https://en.wikipedia.org/wiki/Snake_case[snake style] is suggested. For instance: `open_door` (goal), `My_Group` (variable), `bob` (constant), `professor` (role), `defense_group` (group type).
 
-However, for identifiers created in Java (as observable properties and operations), the https://en.wikipedia.org/wiki/Camel_case[camel style] is suggested. For instance: `doorColor(blue)`, `openDoor`.
 
 NOTE: to be discussed.
+
+
+However, for identifiers created in Java (as observable properties and operations), the https://en.wikipedia.org/wiki/Camel_case[camel style] is suggested. For instance: `doorColor(blue)`, `openDoor`.
+
+The word used for identifiers should be aligned with how human readers interpret them.
+
+terms:: terms in beliefs are used to identify objects, which may have predicates, are relate to others, are parameter for some actions, etc. So identifiers should help the reader to recognize the object.  For instance:
+- `door`, as used in `open(door)`
+- `bob`, as used in `happy(bob)` or `.send(bob,....)`
+
+beliefs:: for the functor of beliefs, i.e., what precedes `(`, use words that are predicates. For instance:
+- `open(door)`, the object door has the predicate open. It is better than `door(open)` or `opening(door)`.
+- `loves(bob,alice)`, the predicate refers to a relation between two object, i.e., the  pair `bob,alice` has the predicate `loves`.
+- `it_is_warm`, it is a proposition, since there are no terms in this belief.
++
+Avoid, for instance `bob(happy)`, where the term could be interpreted by the reader as a predicate and the predicate as an  object.
+
+declarative goals:: use identifiers that are predicates. For instance:
+- `!happy(bob)`, the agent intends a state of the world where bob has the predicate happy. Ideally, if the goal is achieved, then the agent beliefs in `happy(bob)`.
+- `!running(bob)`, the agent intends a state where bob is running
+
+procedural goals:: use identifiers that are verbs. For instance:
+-  `!run`, the agent intends an activity (to run).
+
+action:: use verbs, the terms can be read as parameters in this case. For instance:
+- `run`
+- `run("30min")`
+
+Example of plans:
+[source,jasonagent]
+----
++!happy(bob) : happy(bob). // my goal was achieved already
++!happy(bob)               // a declarative goal, a state is intended
+    :  lonely(bob)         // I believe that bob has predicate lonely
+    <- .send(bob,tell,i_am_going_to_visit_you).
+----
+
+[source,jasonagent]
+----
++!run(T) :            // a procedural goal, the  agent intends some activity
+    :  sunny          // I believe that it is sunny
+    <- goto(parc);   // do some action
+       run(T).       // do some action
+----
+
 
 === Plans
 

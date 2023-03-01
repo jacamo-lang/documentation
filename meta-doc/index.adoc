@@ -87,7 +87,7 @@ The proposed preamble of AsciiDoc documents is:
 
 === Links 
 
-Links to other documents available in JaCaMo doc repository should be written  as relative links using `xref`. With `xref` `.adoc` is properly replaced by `.html` when necessary).
+Links to other documents available in JaCaMo doc repository should be written  as relative links using `xref`. With `xref` `.adoc` is properly replaced by `.html` when necessary.
 
 Example:
 ----
@@ -96,7 +96,7 @@ It is detailed in xref:../getting-started/index.adoc[Getting Started]
 
 that produces:
 ====
-It is detailed in lxref:../getting-started/index.adoc[Getting Started]
+It is detailed in xref:../getting-started/index.adoc[Getting Started]
 ====
 
 === Programs
