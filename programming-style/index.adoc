@@ -27,19 +27,19 @@ However, for identifiers created in Java (as observable properties and operation
 
 The word used for identifiers should be aligned with how human readers interpret them.
 
-terms:: terms in beliefs are used to identify objects, which may have predicates, are relate to others, are parameter for some actions, etc. So identifiers should help the reader to recognize the object.  For instance:
+terms:: terms in beliefs are used to identify objects, which may have predicates, may relate to others, or may be parameter for some actions, etc. So identifiers should help the reader to recognize the object.  For instance:
 - `door`, as used in `open(door)`
 - `bob`, as used in `happy(bob)` or `.send(bob,....)`
 
 beliefs:: for the functor of beliefs, i.e., what precedes `(`, use words that are predicates. For instance:
-- `open(door)`, the object door has the predicate open. It is better than `door(open)` or `opening(door)`.
-- `loves(bob,alice)`, the predicate refers to a relation between two object, i.e., the  pair `bob,alice` has the predicate `loves`.
-- `it_is_warm`, it is a proposition, since there are no terms in this belief.
+- `warm(room)`, the predicate `warm` refers to a property of the object `room`. It is better than `room(warm)` or `warming(room)`.
+- `loves(bob,alice)`, the predicate refers to a relation `loves` between the two objects `bob` and `alice`.
+- `it_is_warm`, is a proposition, since there are no terms in this belief.
 +
 Avoid, for instance `bob(happy)`, where the term could be interpreted by the reader as a predicate and the predicate as an  object.
 
 declarative goals:: use identifiers that are predicates. For instance:
-- `!happy(bob)`, the agent intends a state of the world where bob has the predicate happy. Ideally, if the goal is achieved, then the agent beliefs in `happy(bob)`.
+- `!happy(bob)`, the agent intends a state of the world where bob has the predicate happy. Ideally, if the goal is achieved, then the agent believes in `happy(bob)`.
 - `!running(bob)`, the agent intends a state where bob is running
 
 procedural goals:: use identifiers that are verbs. For instance:
@@ -52,15 +52,15 @@ action:: use verbs, the terms can be read as parameters in this case. For instan
 Example of plans:
 [source,jasonagent]
 ----
-+!happy(bob) : happy(bob). // my goal was achieved already
++!happy(bob) : happy(bob). // my goal was already achieved
 +!happy(bob)               // a declarative goal, a state is intended
-    :  lonely(bob)         // I believe that bob has predicate lonely
+    :  lonely(bob)         // alice believes that bob has predicate lonely
     <- .send(bob,tell,i_am_going_to_visit_you).
 ----
 
 [source,jasonagent]
 ----
-+!run(T) :            // a procedural goal, the  agent intends some activity
++!run(T)              // a procedural goal, the  agent intends some activity
     :  sunny          // I believe that it is sunny
     <- goto(parc);   // do some action
        run(T).       // do some action
@@ -113,9 +113,6 @@ It simplifies commenting the last line of the plan and can be seen as _ending_  
 === Comments
 
 no rules for comments (?). 
-
-
-
 
 
 == Artifacts
