@@ -92,9 +92,9 @@ A plan with multiple lines should follow the style:
 Remarks:
 
 *  `:` and `\<-` are aligned, as well as `not` and  `doA` (i.e., two spaces after `:`).
-* the first `&` is placed in the same line as `v(X) & X >  10`, so it simplifies to comment this condition. 
+* the first `&` is placed in the same line as `v(X) & X >  10`, so it makes it simples to comment out this condition. 
 
-The final `.` can also be place into a  new line aligned with `\<-`:
+The final `.` can also be place into a new line aligned with `\<-`:
 
 [source,jasonagent]
 ----
@@ -108,7 +108,7 @@ The final `.` can also be place into a  new line aligned with `\<-`:
     .
 ----
 
-It simplifies commenting the last line of the plan and can be seen as _ending_  the body that started at `\<-`. It may remember how `{` and `}` are aligned to mark the begin and end of block in some styles.
+This simplifies commenting out the last line of the plan and can be seen as _ending_  the body that started at `\<-`. It is reminiscent of how `{` and `}` are aligned to mark the begin and end of block in some languages.
 
 === Comments
 
@@ -117,6 +117,6 @@ no rules for comments (?).
 
 == Artifacts
 
-Since artifacts are written in Java, we recommend the https://google.github.io/styleguide/javaguide.html[Google's Java style guide].
+Since artifacts are written in Java, we recommend https://google.github.io/styleguide/javaguide.html[Google's Java style guide].
 
 
