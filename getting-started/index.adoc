@@ -122,9 +122,9 @@ The source codes of these agents are expected to be in the files `alice.asl` and
    <- .send(bob,tell,greeting("hello world")).
 
 // some usual includes for JaCaMo projects:
-{ include("$jacamoJar/templates/common-cartago.asl") }
-{ include("$jacamoJar/templates/common-moise.asl") }
-{ include("$moiseJar/asl/org-obedient.asl") }
+{ include("$jacamo/templates/common-cartago.asl") }
+{ include("$jacamo/templates/common-moise.asl") }
+{ include("$moise/asl/org-obedient.asl") }
 ----
 
 This code states that alice has one xref:../terminology.adoc#goal[goal], created when alice starts running. This goal can be achieved by a xref:../terminology.adoc#plan[plan] (3rd and 4th lines) that simply sends a xref:../terminology.adoc#message[message] to another agent named bob telling him `greeting("hello world")`.
@@ -142,9 +142,9 @@ The source code for bob (file `src/agt/bob.asl`) is:
     .print("I received ",M," from ",A).
 
 // some usual includes for JaCaMo projects:
-{ include("$jacamoJar/templates/common-cartago.asl") }
-{ include("$jacamoJar/templates/common-moise.asl") }
-{ include("$moiseJar/asl/org-obedient.asl") }
+{ include("$jacamo/templates/common-cartago.asl") }
+{ include("$jacamo/templates/common-moise.asl") }
+{ include("$moise/asl/org-obedient.asl") }
 ----
 
 This plan states that as soon as bob has a xref:../terminology.adoc#belief[belief] that matches `greeting(M)[source(A)]`, it prints out a message. This belief is added in his mind as the consequence of receiving alice's message. 
@@ -219,9 +219,9 @@ The artifact also provides two actions: `inc` and `inc_get`. The latter incremen
       !count. // continue counting
 
 // some usual includes for JaCaMo projects:
-{ include("$jacamoJar/templates/common-cartago.asl") }
-{ include("$jacamoJar/templates/common-moise.asl") }
-{ include("$moiseJar/asl/org-obedient.asl") }
+{ include("$jacamo/templates/common-cartago.asl") }
+{ include("$jacamo/templates/common-moise.asl") }
+{ include("$moise/asl/org-obedient.asl") }
 ----
 
 Now, we will code Bob to also increment the counter continuously. Bob uses the operation `inc` instead of `inc_get`, that has no parameter: it increments the counter by 1. Since changes in the counter produces changes in the belief `count`, Bob reacts to this changes printing the new perceived  value:
@@ -247,9 +247,9 @@ Now, we will code Bob to also increment the counter continuously. Bob uses the o
    <- .print("counter = ",X).
 
 // some usual includes for JaCaMo projects:
-{ include("$jacamoJar/templates/common-cartago.asl") }
-{ include("$jacamoJar/templates/common-moise.asl") }
-{ include("$moiseJar/asl/org-obedient.asl") }
+{ include("$jacamo/templates/common-cartago.asl") }
+{ include("$jacamo/templates/common-moise.asl") }
+{ include("$moise/asl/org-obedient.asl") }
 ----
 
 So both agents are incrementing the value of a shared counter. Alice is getting unique values (for purposes not considered here) and Bob is just printing the values as soon as they are perceived:

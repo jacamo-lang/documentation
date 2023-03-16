@@ -16,6 +16,6 @@
       !count.
 
 // some usual includes for JaCaMo projects:
-{ include("$jacamoJar/templates/common-cartago.asl") }
-{ include("$jacamoJar/templates/common-moise.asl") }
-{ include("$moiseJar/asl/org-obedient.asl") }
+{ include("$jacamo/templates/common-cartago.asl") }
+{ include("$jacamo/templates/common-moise.asl") }
+{ include("$moise/asl/org-obedient.asl") }
