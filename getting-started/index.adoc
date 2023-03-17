@@ -166,7 +166,7 @@ image:./figs/screen-vsc1.png[VSC]
 
 // TODO: link to terminology
 
-The environment provides perception for the agents and is where their actions take place. In our application, agents will share an artifact of the environment to get unique identifiers. This kind of artifact is already included in the initial project.  It is in file `src/env/tools/Counter.java`, so you do not need to implement it. We will focus thus on how agents use it.
+The environment provides perception for the agents and is where their actions take place. In our application, agents will share an artifact of the environment to get unique identifiers. This kind of artifact is already included in the initial project.  It is in the file `src/env/example/Counter.java`, so you do not need to implement it. We will focus thus on how agents use it.
 
 First, you need to set up our MAS environment with an instance of the Counter artifact. Second, our agents should focus on this artifact. These set up can be done changing the application file:
 
