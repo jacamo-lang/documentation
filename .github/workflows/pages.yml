@@ -28,4 +28,4 @@ jobs:
         # source_dir: docs/ # default is .
         # slides_build: true
         # pre_build:
-        post_build: 'find . -name reamde.html -execdir cp readme.html index.html \;'
+        post_build: 'find . -name readme.html -execdir cp readme.html index.html \;'
