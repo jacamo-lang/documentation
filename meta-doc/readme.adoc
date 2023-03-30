@@ -27,14 +27,14 @@ The preferred documentation tool is https://asciidoc.org[AsciiDoc]. Of course, i
 == Files and Folders
 
 * Every document has its own folder. 
-* `index.adoc` is the entry point.
+* `readme.adoc` is the entry point.
 * if the documentation is accompanied with programs, they should be placed under a directory named `code`.
 * figures should be placed into a `figs` folder.
 
 For example, it follows the organization of files of the getting started documentation:
 ----
 getting-started
-├── index.adoc
+├── readme.adoc
 ├── code
 │   └── my1st-app
 │       ├── my1st_app.jcm
@@ -91,17 +91,17 @@ Links to other documents available in JaCaMo doc repository should be written  a
 
 Example:
 ----
-It is detailed in xref:../getting-started/index.adoc[Getting Started]
+It is detailed in xref:../getting-started/readme.adoc[Getting Started]
 ----
 
 that produces:
 ====
-It is detailed in xref:../getting-started/index.adoc[Getting Started]
+It is detailed in xref:../getting-started/readme.adoc[Getting Started]
 ====
 
 === Programs
 
-Programs should be formatted following the xref:../programming-style/index.adoc[JaCaMo programming style for source code]. Source code should be included into the AsciiDoc files as follows:
+Programs should be formatted following the xref:../programming-style/readme.adoc[JaCaMo programming style for source code]. Source code should be included into the AsciiDoc files as follows:
 
 [source,asciidoc]
 ....
