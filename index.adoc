@@ -15,4 +15,4 @@ Current documents:
 
  - xref:./getting-started/readme.adoc[Getting Started]
 
-More documentation is available on http://jacamo-lang.github.io/jacamo/[GitHub].
+More documentation is available on https://github.com/jacamo-lang/jacamo/tree/master/doc[GitHub].
