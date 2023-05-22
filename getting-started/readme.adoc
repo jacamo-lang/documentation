@@ -24,7 +24,9 @@ You will build a very simple Multi-Agent System composed of two agents that exch
 = Creating an initial application
 
 
-The following commands will create a new xref:../terminology.adoc#jacamo_application[JaCaMo application] identified by `*my1st-app*` with some initial source code for xref:../terminology.adoc#agent[agents], xref:../terminology.adoc#environment[environment] and xref:../terminology.adoc#organization[organization]. (The first time you run JaCaMo takes longer since it downloads all dependencies.)
+The following commands will create a new xref:../terminology.adoc#jacamo_application[JaCaMo application] identified by `*my1st-app*` with some initial source code for xref:../terminology.adoc#agent[agents], xref:../terminology.adoc#environment[environment] and xref:../terminology.adoc#organization[organization]. (The first time you run JaCaMo takes longer since it downloads all dependencies.) 
+
+NOTE: You find alternatives to create JaCaMo applications link:http://jacamo-lang.github.io/jacamo/install.html[here] (using codespace/gitpod/docker/...).
 
 Unix::
 +
