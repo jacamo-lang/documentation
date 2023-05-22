@@ -29,13 +29,13 @@ The following commands will create a new xref:../terminology.adoc#jacamo_applica
 Unix::
 +
 ----------------
-wget -q http://jacamo-lang.github.io/jacamo/nps/npss.zip
-unzip npss.zip
+wget -q http://jacamo-lang.github.io/jacamo/nps/np1.2.zip
+unzip np1.2.zip
 ./gradlew -Dexec.args="my1st-app --console"
 ----------------
 
 Windows::
-1. Download http://jacamo-lang.github.io/jacamo/nps/npss.zip
+1. Download http://jacamo-lang.github.io/jacamo/nps/np1.2.zip
 2. Unzip
 3. Run `gradlew.bat`. When asked to give an identification, you should answer `my1st-app`.
 
