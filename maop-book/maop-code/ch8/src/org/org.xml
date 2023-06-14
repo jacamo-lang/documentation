@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="http://moise.sourceforge.net/xml/os.xsl" type="text/xsl" ?>
+
+<organisational-specification
+    id="bookmaop_org"
+    os-version="0.8"
+
+    xmlns='http://moise.sourceforge.net/os'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://moise.sourceforge.net/os
+                        http://moise.sourceforge.net/xml/os.xsd' >
+
+<structural-specification>
+
+  <role-definitions>
+    <role id="role0"/>
+    <role id="role1"> <extends role="role0"/> </role>
+    <role id="role2"> <extends role="role0"/> </role>
+</role-definitions>
+
+<group-specification id="group1">
+    <roles>
+        <role id="role1" min="1" max="2"/>
+        <role id="role2" min="1" max="1"/>
+    </roles>
+
+    <links>
+       <link from="role1" to="role2" type="authority"     scope="intra-group" bi-dir="false"/>
+       <link from="role0" to="role0" type="communication" scope="intra-group" bi-dir="true"/>
+    </links>
+    <formation-constraints>
+       <compatibility from="role1" to="role2" bi-dir="true"/>
+    </formation-constraints>
+</group-specification>
+</structural-specification>
+
+<functional-specification>
+    <scheme id="scheme1">
+        <goal id="goal1" ds="description of goal1">
+            <plan operator="sequence">
+                <goal id="goal2" ttf="20 minutes" ds="description of goal2"/>
+                <goal id="goal3" ds="description of goal3"/>
+                <goal id="goal4" ds="description of goal4"/>
+            </plan>
+        </goal>
+
+        <mission id="mission1" min="1" max="2">
+            <goal id="goal2" />
+            <goal id="goal4" />
+        </mission>
+        <mission id="mission2" min="1" max="1">
+            <goal id="goal3"/>
+        </mission>
+    </scheme>
+</functional-specification>
+
+<normative-specification>
+    <!-- the norms of the application -->
+    <norm id="norm1" type="obligation" role="role1" mission="mission1"/>
+    <norm id="norm2" type="permission" role="role2" mission="mission2"/>
+</normative-specification>
+
+</organisational-specification>

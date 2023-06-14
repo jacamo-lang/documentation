@@ -1,0 +1,48 @@
+// Agent agent1 in project bookmaop_org
+
+!start.
+
+/* Plans */
+
++!start : true
+   <- // Creation of organization entity "smorg"
+      createWorkspace(smorg);
+      joinWorkspace(smorg,WspId);
+      makeArtifact(smorg, "ora4mas.nopl.OrgBoard",
+                   ["src/org/org.xml"], OrgArtId)[wid(WspId)];
+      focus(OrgArtId)[wid(WspId)];
+      // Group-entity lifecycle: Creation of group entity "g1" in "smorg"
+      createGroup(g1, group1, GrArtId)[artifact_id(OrgArtId)];
+      focus(GrArtId)[wid(WspId)];
+      // Group-entity lifecycle: Adoption of role "role1" in "g1"
+      adoptRole(role1)[artifact_id(GrArtId)];
+      // Group-entity lifecycle: Adoption of role "role2" in "g2"
+      adoptRole(role2)[artifact_id(GrArtId)];
+      // Group-entity lifecycle: Waiting that "g1" is well-formed
+      .wait(formationStatus(ok)[artifact_id(GrArtId)]);
+      // Scheme-entity lifecycle: Creation of social scheme entity "sch1"
+      createScheme(sch1, scheme1, SchArtId)[artifact_id(OrgArtId)];
+      // Group-entity lifecycle: Adding of "sch1" under the responsibility of "g1"
+      addScheme(sch1)[artifact_id(GrArtId)];
+      focus(SchArtId)[wid(WspId)];
+      // organization entity "smorg" created
+      .
+
+// Scheme-entity lifecycle: commitment to missions
++permission(Ag, MCond, committed(Ag, Mission, Scheme), Deadline) : .my_name(Ag)
+    <- commitMission(Mission)[artifact_name(Scheme)].
+
+// Domain level actions: satisfaction of goals
++!goal2[scheme(sch1)]  <- .println("satisfying goal2 in sch1");  +goal2.
++!goal3[scheme(sch1)]  <- .println("satisfying goal3 in sch1");  +goal3.
++!goal4[scheme(sch1)]  <- .println("satisfying goal4 in sch1");  +goal4.
++!goal2[scheme(ssch1)] <- .println("satisfying goal2 in ssch1"); +goal2.
++!goal3[scheme(ssch1)] <- .println("satisfying goal3 in ssch1"); +goal3.
++!goal4[scheme(ssch1)] <- .println("satisfying goal4 in ssch1"); +goal4.
+
+{ include("$jacamoJar/templates/common-cartago.asl") }
+{ include("$jacamoJar/templates/common-moise.asl") }
+
+// Common definitions pertaining to Scheme-entity and Normative-entity lifecycle
+// Obedience to norm prescriptions
+{ include("$moiseJar/asl/org-obedient.asl") }

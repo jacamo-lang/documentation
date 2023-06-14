@@ -1,0 +1,11 @@
+mas step1 {
+
+    agent room_agent : room_agent.asl {
+    	goals: temperature(21)
+        focus: room.hvac
+    }
+
+	workspace room {
+        artifact hvac: devices.HVAC(15)
+    }
+}

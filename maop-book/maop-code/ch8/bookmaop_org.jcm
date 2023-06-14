@@ -1,0 +1,19 @@
+/*
+    bookmaop_org
+    ---------------------------
+*/
+
+mas bookmaop_org {
+
+   agent agent1 {
+       roles: role1 in sg1
+   }
+   agent agent2
+
+   organisation sharedorg : org.xml {
+       group sg1 : group1 {
+           responsible-for: ssch1
+       }
+       scheme ssch1 : scheme1
+   }
+}

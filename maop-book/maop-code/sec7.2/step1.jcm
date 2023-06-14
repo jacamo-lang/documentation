@@ -1,0 +1,35 @@
+
+mas step1 {
+
+    agent pa1 : personal_assistant.asl {
+        beliefs: preferred("reading", high)
+                 preferred("watching", high)
+                 preferred("cooking", high)
+                 preferred("sport", medium)
+        join: room
+    }
+
+    agent pa2 : personal_assistant.asl {
+        beliefs: preferred("reading", medium)
+                 preferred("watching", high)
+                 preferred("cooking", medium)
+                 preferred("sport", low)
+        join: room
+    }
+
+    agent pa3 : personal_assistant.asl {
+        beliefs: preferred("reading", low)
+                 preferred("watching", medium)
+                 preferred("cooking", low)
+                 preferred("sport", low)
+        join: room
+    }
+
+    agent rc : room_controller.asl {
+        focus: room.hvac
+    }
+
+    workspace room {
+        artifact hvac: devices.HVAC(20)
+    }
+}

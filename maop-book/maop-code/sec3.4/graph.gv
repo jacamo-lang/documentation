@@ -1,0 +1,90 @@
+digraph G {
+	graph [
+		rankdir="TB"
+		bgcolor="transparent"
+	]
+	subgraph cluster_org {
+		label="organisation"
+		labeljust="r"
+		pencolor=gray
+		fontcolor=gray
+		"ghw" [ 
+		label = "ghw"
+			shape=tab style=filled pencolor=black fillcolor=lightgrey
+		];
+		"shw" [ 
+		label = "shw"
+			shape=hexagon style=filled pencolor=black fillcolor=linen
+		];
+		{rank=same };
+	};
+	"ghw"->"alice" [arrowtail=normal dir=back label="greeter"]
+	"ghw"->"bob" [arrowtail=normal dir=back label="greeter"]
+	"ghw"->"shw" [arrowtail=normal arrowhead=open label="responsible
+for"]
+	"shw"->"alice" [arrowtail=normal dir=back label="mission2"]
+	"shw"->"bob" [arrowtail=normal dir=back label="mission1"]
+	subgraph cluster_ag {
+		label="agents"
+		labeljust="r"
+		pencolor=gray
+		fontcolor=gray
+		"alice" [ 
+			label = "alice"
+			shape = "ellipse" style=filled fillcolor=white
+				URL = "/agents/alice/mind"
+				target="mainframe"
+		];
+		"bob" [ 
+			label = "bob"
+			shape = "ellipse" style=filled fillcolor=white
+				URL = "/agents/bob/mind"
+				target="mainframe"
+		];
+		{rank=same alice bob};
+	};
+	subgraph cluster_env {
+		label="environment"
+		labeljust="r"
+		pencolor=gray
+		fontcolor=gray
+		subgraph cluster_greeting {
+			label="greeting"
+			labeljust="r"
+			style=dashed
+			pencolor=gray40
+			fontcolor=gray40
+{rank=same };
+		};
+		subgraph cluster_toolbox {
+			label="toolbox"
+			labeljust="r"
+			style=dashed
+			pencolor=gray40
+			fontcolor=gray40
+			"board" [ 
+			label="board"
+				shape=record style=filled fillcolor=white
+				URL="/workspaces/toolbox/board"
+				target="mainframe"
+			];
+			"board" [ 
+			label="board"
+				shape=record style=filled fillcolor=white
+				URL="/workspaces/toolbox/board"
+				target="mainframe"
+			];
+{rank=same board};
+		};
+		subgraph cluster_main {
+			label="main"
+			labeljust="r"
+			style=dashed
+			pencolor=gray40
+			fontcolor=gray40
+{rank=same };
+		};
+	};
+		"alice"->"board" [arrowhead=odot]
+		"bob"->"board" [arrowhead=odot]
+}

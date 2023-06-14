@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="http://moise.sf.net/xml/os.xsl" type="text/xsl" ?>
+
+<organisational-specification
+  id="room_org"
+
+  os-version="0.11"
+  xmlns='http://moise.sourceforge.net/os'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='http://moise.sourceforge.net/os
+                      http://moise.sourceforge.net/xml/os.xsd' >
+
+  <structural-specification>
+        <group-specification id="room" >
+            <roles>
+                <role id="assistant"  min="2" max="5" />
+                <role id="controller" min="1" max="1" />
+            </roles>
+        </group-specification>
+  </structural-specification>
+
+  <functional-specification>
+        <scheme id="decide_temp" >
+            <goal id="voting">
+                <plan operator="sequence" >
+                    <goal id="preferences"  ttf="5 seconds" />
+                    <goal id="open_voting"/>
+                    <goal id="vote" ttf="10 seconds">
+                        <argument id="voting_machine_id" />
+                    </goal>
+                    <goal id="close_voting" />
+                </plan>
+            </goal>
+
+            <mission id="mAssistant" min="1" >
+                <goal id="preferences"/>
+            </mission>
+
+            <mission id="mVote" min="1" >
+                <goal id="vote"/>
+            </mission>
+
+            <mission id="mController" min="1" >
+                <goal id="open_voting"/>
+                <goal id="close_voting"/>
+            </mission>
+        </scheme>
+
+  </functional-specification>
+
+  <normative-specification>
+    <norm id="n1a"
+          role="assistant"  type="obligation" mission="mAssistant" />
+    <norm id="n1b"
+          role="assistant"  type="obligation" mission="mVote" />
+    <norm id="n2"
+          role="controller" type="obligation" mission="mController" />
+  </normative-specification>
+</organisational-specification>

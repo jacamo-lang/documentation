@@ -1,0 +1,52 @@
+mas roomV  {
+
+    agent pa1 : personal_assistant.asl {
+        beliefs: preferred("reading", high)
+                 preferred("watching", high)
+                 preferred("cooking", high)
+                 preferred("sport", medium)
+        join: room
+    }
+
+    agent pa2 : personal_assistant.asl {
+        beliefs: preferred("reading", medium)
+                 preferred("watching", high)
+                 preferred("cooking", medium)
+                 preferred("sport", low)
+        join: room
+    }
+
+    agent pa3 : personal_assistant.asl {
+        beliefs: preferred("reading", low)
+                 preferred("watching", medium)
+                 preferred("cooking", low)
+                 preferred("sport", low)
+        join: room
+    }
+
+    agent rc : room_controller.asl {
+        focus: room.hvac
+    }
+
+    workspace room {
+        artifact hvac: devices.HVAC(20)
+    }
+
+    workspace vmws {
+        artifact v1: voting.VotingMachine() {
+            focused-by: vm::rc
+        }
+        agents: pa1, pa2, pa3
+    }
+
+    organisation smart_house_org : smart_house.xml {
+            group r1 : room {
+                players: pa1 assistant
+                         pa2 assistant
+                         pa3 assistant
+                         rc  controller
+                responsible-for: temp_r1
+            }
+            scheme temp_r1: decide_temp
+    }
+}

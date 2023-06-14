@@ -1,0 +1,20 @@
+mas sit_hw {
+  agent bob {
+    join: room               // bob joins workspace toolbox
+    goals: say("Hello")
+  }
+
+  agent alice {
+    join: room        // alice also joins workspace toolbox
+    focus: room.board        // and focus on artifact board
+  }
+
+  agent john {
+    join: room        // alice also joins workspace toolbox
+    focus: room.board        // and focus on artifact board
+  }
+
+  workspace room {         // creates the workspace toolbox
+    artifact board: tools.Blackboard // with artifact board
+  }
+}

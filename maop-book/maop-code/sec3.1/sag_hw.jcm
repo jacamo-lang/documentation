@@ -1,0 +1,5 @@
+mas sag_hw {                 // the MAS is identified by sag_hw
+  agent bob: hwa.asl {  // initial plans for bob are in hwa.asl
+    goals: say("Hello World")           // initial goal for bob
+  }
+}

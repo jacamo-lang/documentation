@@ -1,0 +1,22 @@
+mas ping_pong {
+  agent agentA : agent3.asl {
+    focus: playground.left
+           playground.right
+    goals: start
+  }
+
+  agent agentB : agent3.asl {
+    focus: playground.left
+           playground.right
+  }
+
+  agent agentC2 {
+    focus: playground.left
+           playground.right
+  }
+
+  workspace playground {
+    artifact left:  tools.Table
+    artifact right: tools.Table
+  }
+}

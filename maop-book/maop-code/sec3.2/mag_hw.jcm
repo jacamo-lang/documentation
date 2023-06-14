@@ -1,0 +1,8 @@
+mas mag_hw {
+    agent bob: hwa.asl {
+      goals: say("Hello")
+    }
+    agent alice: hwa.asl {
+      goals: say("World")
+    }
+}

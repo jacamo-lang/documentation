@@ -1,0 +1,9 @@
+mas dic {
+  agent bob {
+    focus: w.dictionary
+  }
+
+  workspace w {
+    artifact dictionary: tools.Dictionary
+  }
+}

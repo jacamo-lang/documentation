@@ -1,0 +1,9 @@
+mas calc {
+  agent bobB {
+    focus: w.calculator
+  }
+
+  workspace w {
+    artifact calculator: tools.CalculatorB
+  }
+}
