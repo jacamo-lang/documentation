@@ -1,6 +1,6 @@
 # JaCaMo Platform Documentation
 :toc: right
-:author: JaCaMo Team
+:author: JaCaMo Community Doc
 :date: February 2023
 :source-highlighter: coderay
 :coderay-linenums-mode: inline
