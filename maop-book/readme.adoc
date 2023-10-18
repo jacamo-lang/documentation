@@ -29,7 +29,7 @@ Example of output:
 [bob] Hello World
 ----
 
-NOTE: to edit the code, create new projects and discover other options to run the application, see the link:http://jacamo.sf.net[JaCaMo web site].
+NOTE: to edit the code, create new projects and discover other options to run the application, see the link:https://jacamo-lang.github.io/[JaCaMo web site].
 
 NOTE: the JaCaMo version used in the book is 1.1
 
