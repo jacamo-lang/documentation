@@ -1,4 +1,4 @@
-# JaCaMo Documentation
+= JaCaMo Documentation
 :toc: right
 :author: JaCaMo Team
 :date: February 2023

@@ -1,4 +1,4 @@
-# JaCaMo Platform Documentation
+= JaCaMo Platform Documentation
 :toc: right
 :author: JaCaMo Community Doc
 :date: February 2023

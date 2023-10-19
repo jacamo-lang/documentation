@@ -1,4 +1,4 @@
-# JaCaMo contributing guide
+= JaCaMo contributing guide
 :toc: right
 :author: JaCaMo Team
 :date: March 2023

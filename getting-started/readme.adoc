@@ -1,4 +1,4 @@
-# Getting Started as a JaCaMo Application Developer
+= Getting Started as a JaCaMo Application Developer
 :toc: right
 :author: JaCaMo Team
 :date: February 2023
@@ -10,21 +10,21 @@
 This guide walks you through the process of creating a Multi-Agent application using JaCaMo platform.
 
 
-= What You Will Build
+== What You Will Build
 
 You will build a very simple Multi-Agent System composed of two agents that exchange simple messages. These agents are named Bob and Alice. In the application, Alice sends a hello message to Bob, they are situated in the same environment and participate into an organisation. 
 
 
-= What You Need
+== What You Need
 
 * Java 17 or newer
 * A shell terminal
 * A text editor (Visual Studio Code, Notepad, ...)
 
-= Creating an initial application
+== Creating an initial application
 
 
-The following commands will create a new xref:../terminology.adoc#jacamo_application[JaCaMo application] identified by `*my1st-app*` with some initial source code for xref:../terminology.adoc#agent[agents], xref:../terminology.adoc#environment[environment] and xref:../terminology.adoc#organization[organization]. (The first time you run JaCaMo takes longer since it downloads all dependencies.) 
+The following commands will create a new xref:../terminology.adoc#jacamo_application[JaCaMo application] identified by `my1st-app` with some initial source code for xref:../terminology.adoc#agent[agents], xref:../terminology.adoc#environment[environment] and xref:../terminology.adoc#organization[organization]. (The first time you run JaCaMo takes longer since it downloads all dependencies.) 
 
 NOTE: You find alternatives to create JaCaMo applications link:http://jacamo-lang.github.io/jacamo/install.html[here] (using codespace/gitpod/docker/...).
 
@@ -73,7 +73,7 @@ Several files and folders were created, the most relevant are:
     └── test           // Code for testing
 ----
 
-= Execution
+== Execution
 
 The application is ready to be executed with the commands:
 ----
@@ -95,7 +95,7 @@ Jason Http Server running on http://127.0.0.1:3272
 
 As you can see in the last line, an agent named `sample_agent` has printed a "Hello World" message. The JaCaMo Application however keeps running, even without having anything to do. To stop the execution,  you can press <CTRL>-C. 
 
-= Creating agents alice and bob
+== Creating agents alice and bob
 
 So, you will now remove this `sample_agent` from the application and add alice and bob.  
 
@@ -164,7 +164,7 @@ It follows also a screenshot of the project execution when using  Visual Studio 
 
 image:./figs/screen-vsc1.png[VSC]
 
-= Using a shared environment
+== Using a shared environment
 
 // TODO: link to terminology
 
@@ -287,7 +287,7 @@ So both agents are incrementing the value of a shared counter. Alice is getting 
 [alice] I've got the unique value of 16
 ----
 
-= Participating to an organisation
+== Participating to an organisation
 
 Let's make the agents participate to an xref:../terminology#organisation[organisation]. For that purpose, agents will play xref:../terminology.adoc#role[roles] in xref:../terminology.adoc#group[groups] of the organisation. We will create a xref:../terminology.adoc#group_instance[group instance] of `group1` that Alice and Bob will join by adopting roles `role1` and `role2`, respectively.
 
@@ -341,7 +341,7 @@ For the agent programming, we will change Alice's source code so that instead of
 
 Using this implementation, Alice's code is not tightly coupled with Bob anymore. Another agent can replace Bob as the player of `role2` and Alice keeps running correctly. 
 
-= What you have learnt
+== What you have learnt
 
 In this brief tutorial, you have learnt:
 

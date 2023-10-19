@@ -1,4 +1,4 @@
-# Title
+= Title
 :toc: right
 :author: JaCaMo Team
 :date: February 2023
@@ -10,19 +10,19 @@
 Brief description
 
 
-= What You Will Build
+== What You Will Build
 
-= What You Need
+== What You Need
 
 * Java 17 or newer
 * A shell terminal
 * A text editor (Visual Studio Code, Notepad, ...)
 
-= Initial code
+== Initial code
 
 to be downloaded 
 
-= Section 1
+== Section 1
 
 a link to other doc xref:../programming-style/readme.adoc[JaCaMo programming style for source code]
 
@@ -57,5 +57,5 @@ mas my1st_app {
 ----
 
 
-= What you have learnt
+== What you have learnt
 

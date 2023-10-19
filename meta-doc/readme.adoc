@@ -1,4 +1,4 @@
-# Writing JaCaMo documentation
+= Writing JaCaMo documentation
 :toc: right
 :author: JaCaMo Team
 :date: March 2023
@@ -75,7 +75,7 @@ Of course, different documents may have other structure.
 The proposed preamble of AsciiDoc documents is:
 
 ----
-# The title of the documentation
+= The title of the documentation
 :toc: right
 :author: JaCaMo Team
 :date: March 2023
