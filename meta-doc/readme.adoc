@@ -31,7 +31,7 @@ The preferred documentation tool is https://asciidoc.org[AsciiDoc]. Of course, i
 * if the documentation is accompanied with programs, they should be placed under a directory named `code`.
 * figures should be placed into a `figs` folder.
 
-For example, it follows the organization of files of the getting started documentation:
+For example:
 ----
 getting-started
 ├── readme.adoc
