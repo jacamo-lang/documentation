@@ -7,6 +7,6 @@
 :icons: font
 :prewrap!:
 
-This repository groups together all the documentation of the https://github.com/jacamo-lang/jacamo[JaCaMo platform].
+This repository groups together guidelines to write documentation of the https://github.com/jacamo-lang/jacamo[JaCaMo platform].
 
-To write new documents, consider the xref:meta-doc/readme.adoc[writing guidelines].
+//To write new documents, consider the xref:meta-doc/readme.adoc[writing guidelines].
