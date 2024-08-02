@@ -10,6 +10,3 @@
 This repository groups together all the documentation of the https://github.com/jacamo-lang/jacamo[JaCaMo platform].
 
 To write new documents, consider the xref:meta-doc/readme.adoc[writing guidelines].
-
-The HTML version of documents produced by this project can be seen at https://jacamo-lang.github.io/documentation.
-
