@@ -40,3 +40,7 @@ It contains the original/initial documentation written for JaCaMo (tutorials, ex
 Commits are automatically published. Cf. this GitHub https://github.com/jacamo-lang/jacamo/blob/main/.github/workflows/pages.yml[action].
 
 The idea is to move doc from here to the previous repository as we format them accordingly to the guidelines.
+
+== Some ideas of documents
+
+- JaCaMo by examples
