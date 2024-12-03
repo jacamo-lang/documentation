@@ -18,6 +18,9 @@ Commits are automatically published.
 
 It contains links to the other two repositories. (that follows a quite different style: markdown here, asciidoc there).
 
+For the community to add projects on page "Projects", we have a procedure based on "issues" of GitHub (link on the the page). The same for "Community" and other pages.
+
+
 == JaCaMo Doc
 
 Is is based on the repository https://github.com/jacamo-lang/documentation. 
