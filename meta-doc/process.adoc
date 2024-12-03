@@ -1,0 +1,39 @@
+= Current State of JaCaMo documentation
+:toc: right
+
+Currently JaCaMo documentation is not yet unified. We have documentation in three places:
+
+- JaCaMo Web site, seen at https://jacamo-lang.github.io
+- JaCaMo doc, seen at https://jacamo-lang.github.io/documentation/
+- JaCaMo main repository, seen at https://jacamo-lang.github.io/jacamo.
+
+
+== JaCaMo Web site
+
+The sources for the JaCaMo web site are available at the following repository https://github.com/jacamo-lang/jacamo-lang.github.io.
+
+Markdown is used to edit pages.
+
+Commits are automatically published.
+
+It contains links to the other two repositories. (that follows a quite different style: markdown here, asciidoc there).
+
+== JaCaMo Doc
+
+Is is based on the repository https://github.com/jacamo-lang/documentation. 
+
+It was created for a collaborative way of producing documentation for JaCaMo. Currently, only guide lines are produced.
+
+AsciiDoc is used.
+
+Commits are automatically published.
+
+== JaCaMo main repository
+
+Is is based on the main branch of https://github.com/jacamo-lang/jacamo/tree/main/doc.
+
+It contains the original/initial documentation written for JaCaMo (tutorials, examples, technical doc, ...), mostly in asciidoc, but other formats are also used.
+
+Commits are automatically published. Cf. this GitHub https://github.com/jacamo-lang/jacamo/blob/main/.github/workflows/pages.yml[action].
+
+The idea is to move doc from here to the previous repository as we format them accordingly to the guidelines.
