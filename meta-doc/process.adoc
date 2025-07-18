@@ -41,6 +41,6 @@ Commits are automatically published. Cf. this GitHub https://github.com/jacamo-l
 
 The idea is to move doc from here to the previous repository as we format them accordingly to the guidelines.
 
-== Some ideas of documents
+== Some ideas of (new) documents
 
 - JaCaMo by examples

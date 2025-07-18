@@ -10,7 +10,7 @@
 
 This document presents some guidelines for writing documentation for JaCaMo.
 
-The preferred documentation tool is https://asciidoc.org[AsciiDoc]. Of course, in some circumstances other formats are more suited. When someone commit and push `.adoc` files into  the JaCaMo-doc repository, they are automatically translated into  HTML and placed  in the https://jacamo-lang.github.io/documentation/[JaCaMo web site].
+The preferred documentation tool is https://asciidoc.org[AsciiDoc]. Of course, in some circumstances other formats are more suited. When someone commits and pushes `.adoc` files into the JaCaMo-doc repository, they are automatically translated into HTML and placed on the https://jacamo-lang.github.io/documentation/[JaCaMo web site].
 
 == Global Considerations
 
